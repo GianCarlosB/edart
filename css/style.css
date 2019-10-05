@@ -2357,7 +2357,30 @@ span.email-notes {
 }
 
 .navbar-logo {
-  margin: 5% 0
+  margin: 5% 0;
+}
+
+.middle-item-about-details {
+  border-left: solid 1px;
+  border-right: solid 1px;
+}
+
+.adjacent-item-about-details {
+  margin-bottom: 50px;
+}
+
+.minor-title-about, .title-item-about-details {
+  color: #C83438;
+  text-align: center;
+}
+
+.minor-title-about + h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title-item-about-details + p {
+  text-align: center;
 }
 
 /*----------------------------------------
