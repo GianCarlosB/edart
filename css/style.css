@@ -2357,7 +2357,13 @@ span.email-notes {
 }
 
 .navbar-logo {
-  margin: 5% 0;
+  margin-top: 4px;
+}
+
+.contry-flag {
+  margin-left: 5px;
+  padding: 24px 0px;
+  cursor: pointer;
 }
 
 .middle-item-about-details {
