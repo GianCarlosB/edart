@@ -2366,6 +2366,10 @@ span.email-notes {
   cursor: pointer;
 }
 
+.active-flag {
+  width: 35px;
+}
+
 .middle-item-about-details {
   border-left: solid 1px;
   border-right: solid 1px;
