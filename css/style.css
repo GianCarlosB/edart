@@ -2368,6 +2368,7 @@ span.email-notes {
 
 .active-flag {
   width: 35px;
+  border-top: 1px solid #fff;
 }
 
 .middle-item-about-details {
