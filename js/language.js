@@ -1,33 +1,33 @@
 (function($) {
-  "use strict";
+  'use strict';
 	
-	$("#language-portuguese").click(function() {
-		$('.pt').show();
-		$('.br').hide();
-		$('.en').hide();
-		$('#language-portuguese').addClass("active-flag");
-		$('#language-brazilian-portuguese').removeClass("active-flag");
-		$('#language-english').removeClass("active-flag");
-	});
-
-	$("#language-brazilian-portuguese").click(function(){
-		$('.pt').hide();
+	$('#language-brazilian-portuguese').click(function() {
 		$('.br').show();
-		$('.en').hide();
-		$('#language-portuguese').removeClass("active-flag");
-		$('#language-brazilian-portuguese').addClass("active-flag");
-		$('#language-english').removeClass("active-flag");
-	});
-	
-	$("#language-english").click(function(){
 		$('.pt').hide();
-		$('.br').hide();
-		$('.en').show();
-		$('#language-portuguese').removeClass("active-flag");
-		$('#language-brazilian-portuguese').removeClass("active-flag");
-		$('#language-english').addClass("active-flag");
+		$('.en').hide();
+		$('#language-brazilian-portuguese').addClass('active-flag');
+		$('#language-portuguese').removeClass('active-flag');
+		$('#language-english').removeClass('active-flag');
 	});
 	
-	$('#language-portuguese').click();
+	$('#language-portuguese').click(function() {
+		$('.br').hide();
+		$('.pt').show();
+		$('.en').hide();
+		$('#language-brazilian-portuguese').removeClass('active-flag');
+		$('#language-portuguese').addClass('active-flag');
+		$('#language-english').removeClass('active-flag');
+	});
+	
+	$('#language-english').click(function() {
+		$('.br').hide();
+		$('.pt').hide();
+		$('.en').show();
+		$('#language-brazilian-portuguese').removeClass('active-flag');
+		$('#language-portuguese').removeClass('active-flag');
+		$('#language-english').addClass('active-flag');
+	});
+	
+	$('#language-brazilian-portuguese').click();
 
 })(jQuery);
