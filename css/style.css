@@ -1979,8 +1979,26 @@ div#preloader {
   text-align: left;
 }
 
-.footer-content-right {
+.footer-head-right {
   text-align: right;
+}
+
+.img-container {
+  position: relative;
+}
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+.img-container h1 {
+  color: white;
+  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left:  50%;
+  -webkit-transform: translate(-50%, -50%); /* iOS */
+  transform: translate(-50%, -50%);
 }
 
 /*----------------------------------------

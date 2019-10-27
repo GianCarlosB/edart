@@ -8,6 +8,10 @@
 		$('#language-brazilian-portuguese').addClass('active-flag');
 		$('#language-portuguese').removeClass('active-flag');
 		$('#language-english').removeClass('active-flag');
+		var currentSlide = $('#ensign-nivoslider').data('nivo:vars').currentSlide;
+		if(currentSlide === 0 && $('#language-brazilian-portuguese').hasClass('active-flag')) {
+			$('#navbar-logo').attr('style', 'visibility: hidden');
+		}
 	});
 	
 	$('#language-portuguese').click(function() {
@@ -17,6 +21,7 @@
 		$('#language-brazilian-portuguese').removeClass('active-flag');
 		$('#language-portuguese').addClass('active-flag');
 		$('#language-english').removeClass('active-flag');
+		$('#navbar-logo').attr('style', 'visibility: visible');
 	});
 	
 	$('#language-english').click(function() {
@@ -26,6 +31,7 @@
 		$('#language-brazilian-portuguese').removeClass('active-flag');
 		$('#language-portuguese').removeClass('active-flag');
 		$('#language-english').addClass('active-flag');
+		$('#navbar-logo').attr('style', 'visibility: visible');
 	});
 	
 	$('#language-brazilian-portuguese').click();
