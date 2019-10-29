@@ -1979,8 +1979,12 @@ div#preloader {
   text-align: left;
 }
 
-.footer-head-right {
+.footer-title-icons {
   text-align: right;
+}
+
+.footer-icons {
+  margin-left: 15%;	
 }
 
 .img-container {
