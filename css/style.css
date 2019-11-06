@@ -1952,6 +1952,10 @@ div#preloader {
   border-top: 1px solid #fff;
 }
 
+.section-headline-lowercase {
+  text-transform: lowercase;
+}
+
 .middle-item-about-details {
   border-left: solid 1px;
   border-right: solid 1px;
