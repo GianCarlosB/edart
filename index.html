@@ -569,8 +569,33 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="col-md-6 col-sm-6 col-xs-12">
 								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.259810545622!2d-43.78891378655475!3d-20.659640819166437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa3df8bfe8df0a7%3A0x4f6a33b8169c9fc6!2sPar%C3%B3quia%20Nossa%20Senhora%20da%20Concei%C3%A7%C3%A3o%20-%20Conselheiro%20Lafaiete!5e0!3m2!1spt-BR!2sbr!4v1569463458975!5m2!1spt-BR!2sbr" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="form contact-form">
+									<div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
+									<div id="errormessage"></div>
+									<form action="" method="post" role="form" class="contactForm">
+										<div class="form-group">
+											<input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Digite pelo menos 4 caracteres" />
+											<div class="validation"></div>
+										</div>
+										<div class="form-group">
+											<input type="email" class="form-control" name="email" id="email" placeholder="Seu e-mail" data-rule="email" data-msg="Por favor digite um email válido" />
+											<div class="validation"></div>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Digite pelo menos 8 caracteres" />
+											<div class="validation"></div>
+										</div>
+										<div class="form-group">
+											<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escreva alo para nós" placeholder="Menssagem"></textarea>
+											<div class="validation"></div>
+										</div>
+										<div class="text-center"><button type="submit">Enviar Menssagem</button></div>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -647,6 +672,7 @@
 		<script src="lib/appear/jquery.appear.js"></script>
 		<script src="lib/isotope/isotope.pkgd.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/contactform.js"></script>
 		<script src="js/language.js"></script>
 	</body>
 </html>
