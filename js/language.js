@@ -1,7 +1,23 @@
 (function($) {
   'use strict';
 	
+	function checkLanguagesSupported(language) {
+		var languagesSupported = ['br', 'es', 'en'];
+		if (languagesSupported.indexOf(language) >= 0) {
+			return true;
+		}
+		return false;
+	}
+	
+	function checkExibitionLogo(language) {
+		var currentSlide = $('#ensign-nivoslider').data('nivo:vars').currentSlide;
+		if(currentSlide === 0 && $(language).hasClass('active-flag')) {
+			$('#navbar-logo').attr('style', 'visibility: hidden');
+		}
+	}
+	
 	$('#language-brazilian-portuguese').click(function() {
+		checkLanguagesSupported('br') ? $('.full-site').show() : $('.full-site').hide();
 		$('.br').show();
 		$('.pt').hide();
         $('.es').hide();
@@ -12,13 +28,11 @@
         $('#language-spanish').removeClass('active-flag');
 		$('#language-french').removeClass('active-flag');
 		$('#language-english').removeClass('active-flag');
-		var currentSlide = $('#ensign-nivoslider').data('nivo:vars').currentSlide;
-		if(currentSlide === 0 && $('#language-brazilian-portuguese').hasClass('active-flag')) {
-			$('#navbar-logo').attr('style', 'visibility: hidden');
-		}
+		checkExibitionLogo('#language-brazilian-portuguese');
 	});
 	
 	$('#language-portuguese').click(function() {
+		checkLanguagesSupported('pt') ? $('.full-site').show() : $('.full-site').hide();
 		$('.br').hide();
 		$('.pt').show();
         $('.es').hide();
@@ -33,6 +47,7 @@
 	});
     
 	$('#language-spanish').click(function() {
+		checkLanguagesSupported('es') ? $('.full-site').show() : $('.full-site').hide();
 		$('.br').hide();
 		$('.pt').hide();
         $('.es').show();
@@ -44,9 +59,11 @@
 		$('#language-french').removeClass('active-flag');
 		$('#language-english').removeClass('active-flag');
 		$('#navbar-logo').attr('style', 'visibility: visible');
+		checkExibitionLogo('#language-spanish');
 	});
 	
 	$('#language-french').click(function() {
+		checkLanguagesSupported('fr') ? $('.full-site').show() : $('.full-site').hide();
 		$('.br').hide();
 		$('.pt').hide();
         $('.es').hide();
@@ -61,6 +78,7 @@
 	});
 	
 	$('#language-english').click(function() {
+		checkLanguagesSupported('en') ? $('.full-site').show() : $('.full-site').hide();
 		$('.br').hide();
 		$('.pt').hide();
         $('.es').hide();
@@ -72,6 +90,7 @@
 		$('#language-french').removeClass('active-flag');
 		$('#language-english').addClass('active-flag');
 		$('#navbar-logo').attr('style', 'visibility: visible');
+		checkExibitionLogo('#language-english');
 	});
 	
 	$('#language-brazilian-portuguese').click();
