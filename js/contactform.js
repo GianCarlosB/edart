@@ -1,18 +1,34 @@
 jQuery(document).ready(function($) {
-	"use strict";
-
+	'use strict';
+	
+	function getCurrentLanguage() {
+		if ($('#language-brazilian-portuguese').hasClass('active-flag')) {
+			return 'br';
+		} else if ($('#language-portuguese').hasClass('active-flag')) {
+			return 'pt';
+		} else if ($('#language-spanish').hasClass('active-flag')) {
+			return 'es';
+		} else if ($('#language-french').hasClass('active-flag')) {
+			return 'fr';
+		} else if ($('#language-english').hasClass('active-flag')) {
+			return 'en';
+		}
+		return '';
+	}
+	
 	//Contact
 	$('form.contactForm').submit(function() {
 		var f = $(this).find('.form-group'),
 			ferror = false,
-			emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+			emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i,
+			paramsEmail = {};
 
 		f.children('input').each(function() { // run all inputs
 
 			var i = $(this); // current input
 			var rule = i.attr('data-rule');
 
-			if (rule !== undefined) {
+			if (rule !== undefined && i.hasClass(getCurrentLanguage())) {
 				var ierror = false; // error flag for current input
 				var pos = rule.indexOf(':', 0);
 				if (pos >= 0) {
@@ -54,6 +70,7 @@ jQuery(document).ready(function($) {
 						}
 						break;
 				}
+				paramsEmail[i.attr('name')] = i.val();
 				i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
 			}
 		});
@@ -62,7 +79,7 @@ jQuery(document).ready(function($) {
 			var i = $(this); // current input
 			var rule = i.attr('data-rule');
 
-			if (rule !== undefined) {
+			if (rule !== undefined && i.hasClass(getCurrentLanguage())) {
 				var ierror = false; // error flag for current input
 				var pos = rule.indexOf(':', 0);
 				if (pos >= 0) {
@@ -85,36 +102,34 @@ jQuery(document).ready(function($) {
 						}
 						break;
 				}
+				paramsEmail[i.attr('name')] = i.val();
 				i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
 			}
 		});
+
 		if (ferror) return false;
-		else var str = $(this).serialize();
 		var action = $(this).attr('action');
 		if (!action) {
-			action = 'contactform/contactform.php';
+			action = 'send_email/send_email.php';
 		}
-		// Remove later
-		$("#sendmessage").addClass("show");
-		$("#errormessage").removeClass("show");
-		$('.contactForm').find("input, textarea").val("");
-		/*$.ajax({
-			type: "POST",
+
+		$.ajax({
+			type: 'POST',
 			url: action,
-			data: str,
+			data: paramsEmail,
 			success: function(msg) {
 				if (msg == 'OK') {
-					$("#sendmessage").addClass("show");
-					$("#errormessage").removeClass("show");
-					$('.contactForm').find("input, textarea").val("");
+					$('#sendmessage').addClass('show');
+					$('#errormessage').removeClass('show');
+					$('.contactForm').find('input, textarea').val('');
 				} else {
-					$("#sendmessage").removeClass("show");
-					$("#errormessage").addClass("show");
+					$('#sendmessage').removeClass('show');
+					$('#errormessage').addClass('show');
 					$('#errormessage').html(msg);
 				}
 
 			}
-		});*/
+		});
 		return false;
 	});
 
