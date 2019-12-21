@@ -2,7 +2,7 @@
   'use strict';
 	
 	function checkLanguagesSupported(language) {
-		var languagesSupported = ['br', 'es', 'en'];
+		var languagesSupported = ['br', 'es', 'fr', 'en'];
 		if (languagesSupported.indexOf(language) >= 0) {
 			return true;
 		}
@@ -75,6 +75,7 @@
 		$('#language-french').addClass('active-flag');
 		$('#language-english').removeClass('active-flag');
 		$('#navbar-logo').attr('style', 'visibility: visible');
+		checkExibitionLogo('#language-french');
 	});
 	
 	$('#language-english').click(function() {

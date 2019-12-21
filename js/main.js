@@ -31,7 +31,7 @@
 		} else {
 			s.removeClass('stick');
 			var currentSlide = $('#ensign-nivoslider').data('nivo:vars').currentSlide;
-			if(currentSlide === 0 && ($('#language-brazilian-portuguese').hasClass('active-flag') || $('#language-spanish').hasClass('active-flag') ||$('#language-english').hasClass('active-flag'))) {
+			if(currentSlide === 0 && ($('#language-brazilian-portuguese').hasClass('active-flag') || $('#language-spanish').hasClass('active-flag') || $('#language-french').hasClass('active-flag') || $('#language-english').hasClass('active-flag'))) {
 				$('#navbar-logo').attr('style', 'visibility: hidden');
 			}
 		}
@@ -74,7 +74,7 @@
 		var currentSlide = $('#ensign-nivoslider').data('nivo:vars').currentSlide;
 		var totalSlides = $('#ensign-nivoslider').data('nivo:vars').totalSlides;
 			if(($(window).scrollTop() > 300) <= pos.top && (currentSlide + 1 === 0 || currentSlide + 1 === totalSlides)) {
-				if ($('#language-brazilian-portuguese').hasClass('active-flag') || $('#language-spanish').hasClass('active-flag') || $('#language-english').hasClass('active-flag')) {
+				if ($('#language-brazilian-portuguese').hasClass('active-flag') || $('#language-spanish').hasClass('active-flag') || $('#language-french').hasClass('active-flag') || $('#language-english').hasClass('active-flag')) {
 					$('#navbar-logo').attr('style', 'visibility: hidden');
 				}
 			} else {
