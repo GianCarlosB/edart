@@ -2,7 +2,7 @@
   'use strict';
 	
 	function checkLanguagesSupported(language) {
-		var languagesSupported = ['br', 'es', 'fr', 'en'];
+		var languagesSupported = ['br', 'pt', 'es', 'fr', 'en'];
 		if (languagesSupported.indexOf(language) >= 0) {
 			return true;
 		}
@@ -44,6 +44,7 @@
 		$('#language-french').removeClass('active-flag');
 		$('#language-english').removeClass('active-flag');
 		$('#navbar-logo').attr('style', 'visibility: visible');
+		checkExibitionLogo('#language-portuguese');
 	});
     
 	$('#language-spanish').click(function() {
