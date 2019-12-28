@@ -59,10 +59,7 @@
 	//Nivo slider
 	//---------------------------------------------
 	$('#ensign-nivoslider').nivoSlider({
-		effect: 'boxRandom',
-		slices: 15,
-		boxCols: 12,
-		boxRows: 8,
+		effect: 'fold',
 		animSpeed: 500,
 		pauseTime: 5000,
 		startSlide: 0,
