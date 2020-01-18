@@ -965,6 +965,7 @@ div#preloader {
 
 .team-content {
   padding: 10px 0px;
+  height: 130px;
 }
 
 .team-content>h4, .team-content>p {
@@ -2012,6 +2013,10 @@ div#preloader {
   left:  50%;
   -webkit-transform: translate(-50%, -50%); /* iOS */
   transform: translate(-50%, -50%);
+}
+
+.col-override {
+  width: 12.499999995%;
 }
 
 /*----------------------------------------
