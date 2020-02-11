@@ -18,6 +18,7 @@
 	
 	$('#language-brazilian-portuguese').click(function() {
 		checkLanguagesSupported('br') ? $('.full-site').show() : $('.full-site').hide();
+		$('html').attr('lang', 'pt');
 		$('.br').show();
 		$('.pt').hide();
         $('.es').hide();
@@ -33,6 +34,7 @@
 	
 	$('#language-portuguese').click(function() {
 		checkLanguagesSupported('pt') ? $('.full-site').show() : $('.full-site').hide();
+		$('html').attr('lang', 'pt');
 		$('.br').hide();
 		$('.pt').show();
         $('.es').hide();
@@ -49,6 +51,7 @@
     
 	$('#language-spanish').click(function() {
 		checkLanguagesSupported('es') ? $('.full-site').show() : $('.full-site').hide();
+		$('html').attr('lang', 'es');
 		$('.br').hide();
 		$('.pt').hide();
         $('.es').show();
@@ -65,6 +68,7 @@
 	
 	$('#language-french').click(function() {
 		checkLanguagesSupported('fr') ? $('.full-site').show() : $('.full-site').hide();
+		$('html').attr('lang', 'fr');
 		$('.br').hide();
 		$('.pt').hide();
         $('.es').hide();
@@ -81,6 +85,7 @@
 	
 	$('#language-english').click(function() {
 		checkLanguagesSupported('en') ? $('.full-site').show() : $('.full-site').hide();
+		$('html').attr('lang', 'en');
 		$('.br').hide();
 		$('.pt').hide();
         $('.es').hide();
