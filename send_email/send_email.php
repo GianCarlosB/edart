@@ -24,12 +24,12 @@
 			$mail->SMTPDebug = 0;  
 			$mail->SMTPAuth = true;
 			$mail->Port = 25;
-			$mail->Username = 'edart@edart.ltda';
-			$mail->Password = '3d@RT96!';
+			$mail->Username = 'contato@edart.ltda';
+			$mail->Password = 'Alterar3@';
 			
-			$mail->setFrom('edart@edart.ltda', 'Edart');
-			$mail->addAddress('edart@edart.ltda', 'Edart');
-			$mail->addReplyTo('edart@edart.ltda', 'Edart');
+			$mail->setFrom('contato@edart.ltda', 'Edart');
+			$mail->addAddress('contato@edart.ltda', 'Edart');
+			$mail->addReplyTo('contato@edart.ltda', 'Edart');
 
 			$mail->isHTML(true);
 			$mail->Subject = 'Contato realizado via website';
