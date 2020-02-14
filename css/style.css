@@ -1989,7 +1989,7 @@ div#preloader {
 }
 
 .footer-icons {
-  margin-left: 15%;	
+  text-align: right;
 }
 
 .img-container {
@@ -2015,7 +2015,7 @@ div#preloader {
   width: 12.499999995%;
 }
 
-.phone-number {
+.address-number {
   font-family: 'Arial';	
 }
 
