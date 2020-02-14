@@ -33,8 +33,8 @@
 
 			$mail->isHTML(true);
 			$mail->Subject = 'Contato realizado via website';
-			$mail->Body = $body.'<br/><br/>- Nome completo: '.$_POST['name'].'<br/>- E-mail: '.$_POST['email'].'<br/>- Telefone: '.$_POST['phone'].'<br/>- Mensagem: '.$_POST['message'].'<br/><br/>Edart Consultoria Financeira Ltda '.$currentTime;
-			$mail->AltBody = $body.' Nome completo: '.$_POST['name'].', E-mail: '.$_POST['email'].', Telefone: '.$_POST['phone'].', Mensagem: '.$_POST['message'].' - Edart Consultoria Financeira Ltda '.$currentTime;
+			$mail->Body = $body.'<br/><br/>- Nome completo: '.$_POST['name'].'<br/>- E-mail: '.$_POST['email'].'<br/>- Celular/Whatsapp: '.$_POST['phone'].'<br/>- Mensagem: '.$_POST['message'].'<br/><br/>Edart Consultoria Financeira Ltda '.$currentTime;
+			$mail->AltBody = $body.' Nome completo: '.$_POST['name'].', E-mail: '.$_POST['email'].', Celular/Whatsapp: '.$_POST['phone'].', Mensagem: '.$_POST['message'].' - Edart Consultoria Financeira Ltda '.$currentTime;
 			
 			$mail->send();
 			echo 'OK';
