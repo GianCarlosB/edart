@@ -25,7 +25,7 @@
 			$mail->SMTPAuth = true;
 			$mail->Port = 25;
 			$mail->Username = 'contato@edart.ltda';
-			$mail->Password = 'Alterar3@';
+			$mail->Password = '2PIn>E3HI5pkleMKz*ld';
 			
 			$mail->setFrom('contato@edart.ltda', 'Edart');
 			$mail->addAddress('contato@edart.ltda', 'Edart');
