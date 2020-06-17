@@ -2019,6 +2019,16 @@ div#preloader {
   font-family: 'Arial';	
 }
 
+.team-box-item-left {
+  border-right: solid 1px;
+  height: 400px;
+}
+
+.team-box-item-right {
+  border-left: solid 1px;
+  height: 400px;
+}
+
 /*----------------------------------------
  .End CSS
 ----------------------------------------*/
