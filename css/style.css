@@ -2029,6 +2029,10 @@ div#preloader {
   height: 300px;
 }
 
+.logo-accounting {
+  margin: 4px 0 48px;
+}
+
 .link-site {
   color: #000;
 }
